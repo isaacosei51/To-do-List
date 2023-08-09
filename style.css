@@ -77,3 +77,6 @@ li div{
     width: 20%;
     cursor: pointer;
 }
+.checked{
+    background-color: aqua;
+}
