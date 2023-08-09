@@ -84,9 +84,10 @@ const deleteItem = (index) => {
 const editTask = (index) => {
   let task = listItem[index];
   if (task != undefined) {
-    let ask = prompt(`edit ${task} to :`);
+    let ask = prompt(`edit ${task.name} to :`);
     if (ask.length > 0) {
-      listItem[index] = ask;
+      listItem[index].name = ask;
+      listItem[index].timestamp=Date.now()
       //   localStorage.listItem = JSON.stringify(listItem);
       localStorage.setItem("listItem", JSON.stringify(listItem));
       newList();
